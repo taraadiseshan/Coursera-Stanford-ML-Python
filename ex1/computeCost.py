@@ -7,6 +7,10 @@ def computeCost(X, y, theta):
     """
     m = y.size
     J = 0
+    for xi, yi in zip(X,y):
+    	h = theta[0]+theta[1]*xi[1]
+    	J += (h - yi)**2
+    J = J*(1/(2*m))
 
 # ====================== YOUR CODE HERE ======================
 # Instructions: Compute the cost of a particular choice of theta
